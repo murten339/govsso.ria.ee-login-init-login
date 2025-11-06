@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="et">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Turvaline autentimine – Rahvastikuregister</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --top: #0b3f74;
+      --bg: #f2f4f6;
+      --card: #ffffff;
+      --green: #008441;
+      --border: #e2e6ea;
+      font-family: "Inter", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: #0f172a;
+    }
+    header {
+      background: var(--top);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 20px;
+      font-weight: 600;
+    }
+    main {
+      max-width: 980px;
+      margin: 36px auto 48px;
+      padding: 0 16px;
+    }
+    .crest-row {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+    .crest-row img {
+      width: 70px;
+      height: 70px;
+      border-radius: 8px;
+      object-fit: contain;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.03);
+    }
+    .crest-row h2 {
+      font-size: 20px;
+      margin: 0;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 14px;
+      border: 1px solid rgba(15,23,42,0.03);
+      box-shadow: 0 8px 30px rgba(15,23,42,0.05);
+      padding: 26px 26px 28px;
+    }
+    h1 {
+      font-size: 22px;
+      margin-bottom: 14px;
+      color: #0f3c75;
+    }
+    .lead {
+      margin-bottom: 20px;
+      line-height: 1.5;
+      color: #1f2937;
+    }
+    .data-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 120px;
+      margin-bottom: 24px;
+    }
+    .field-label {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      color: #6b7280;
+      margin-bottom: 3px;
+    }
+    .field-value {
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--green);
+      color: #fff;
+    }
+    .btn-secondary {
+      background: #fff;
+      border: 1px solid #c9d1d9;
+      color: #0f3c75;
+    }
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 32px;
+    }
+    @media (max-width: 700px) {
+      .data-grid {
+        grid-template-columns: 1fr;
+      }
+      .card {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Turvaline autentimine asutuste e-teenustes</header>
+
+  <main>
+    <div class="crest-row">
+      <!-- lihtne sisseehitatud “vapp” SVG-na -->
+      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAiIGhlaWdodD0iNzAiIHZpZXdCb3g9IjAgMCA3MCA3MCIgeG1sbnpzcz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgcng9IjgiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2RkZCIvPjx0ZXh0IHg9IjM1IiB5PSI0MiIgZm9udC1zaXplPSIxMCIgZmlsbD0iIzMzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VkFQUDwvdGV4dD48L3N2Zz4=" alt="Vapp" />
+      <h2>Riigi autentimisteenus</h2>
+    </div>
+
+    <section class="card">
+      <h1>Teenusesse Rahvastikuregistri e-teeninduskeskkond sisselogimine</h1>
+      <p class="lead">
+        Teenusesse Rahvastikuregistri e-teeninduskeskkond sisselogimiseks piisab seansi jätkamisest.
+        Teenusele edastatavad andmed:
+      </p>
+
+      <div class="data-grid">
+        <div>
+          <span class="field-label">Eesnimi</span>
+          <span class="field-value">Marten</span>
+        </div>
+        <div>
+          <span class="field-label">Isikukood</span>
+          <!-- siin on 06, mitte 09 -->
+          <span class="field-value">EE50606307135</span>
+        </div>
+        <div>
+          <span class="field-label">Perenimi</span>
+          <span class="field-value">Kaarna</span>
+        </div>
+        <div>
+          <span class="field-label">Sünniaeg</span>
+          <span class="field-value">30.06.2006</span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-primary">Jätka seanssi</button>
+        <button class="btn btn-secondary">Autendi uuesti</button>
+      </div>
+    </section>
+
+    <footer>© 2025 näidisleht</footer>
+  </main>
+</body>
+</html>
