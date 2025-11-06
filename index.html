@@ -7,94 +7,82 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --top: #0b3f74;
-      --bg: #f2f4f6;
-      --card: #ffffff;
+      --blue: #0f4374;
       --green: #008441;
-      --border: #e2e6ea;
+      --gray: #f3f5f7;
+      --white: #fff;
       font-family: "Inter", system-ui, sans-serif;
     }
-    * { box-sizing: border-box; }
     body {
       margin: 0;
-      background: var(--bg);
-      color: #0f172a;
+      background: var(--gray);
+      color: #111;
     }
     header {
-      background: var(--top);
+      background: var(--blue);
       color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 14px 20px;
       font-weight: 600;
+      padding: 14px 20px;
+      text-align: center;
     }
     main {
-      max-width: 980px;
-      margin: 36px auto 48px;
-      padding: 0 16px;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-    .crest-row {
+    .crest {
       display: flex;
-      gap: 14px;
       align-items: center;
-      margin-bottom: 22px;
+      gap: 14px;
+      margin-bottom: 24px;
     }
-    .crest-row img {
+    .crest img {
       width: 70px;
       height: 70px;
       border-radius: 8px;
       object-fit: contain;
       background: #fff;
-      border: 1px solid rgba(0,0,0,.03);
+      border: 1px solid #ccc;
     }
-    .crest-row h2 {
+    .crest h2 {
       font-size: 20px;
-      margin: 0;
     }
     .card {
-      background: var(--card);
-      border-radius: 14px;
-      border: 1px solid rgba(15,23,42,0.03);
-      box-shadow: 0 8px 30px rgba(15,23,42,0.05);
-      padding: 26px 26px 28px;
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      padding: 28px;
     }
     h1 {
       font-size: 22px;
-      margin-bottom: 14px;
-      color: #0f3c75;
+      color: #0b2546;
+      margin-bottom: 18px;
     }
-    .lead {
-      margin-bottom: 20px;
-      line-height: 1.5;
-      color: #1f2937;
-    }
-    .data-grid {
+    .data {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px 120px;
-      margin-bottom: 24px;
+      margin-bottom: 26px;
     }
-    .field-label {
+    .data span {
       display: block;
       font-size: 12px;
+      color: #667;
       text-transform: uppercase;
-      letter-spacing: .03em;
-      color: #6b7280;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
+      letter-spacing: 0.03em;
     }
-    .field-value {
+    .data strong {
       font-size: 15px;
-      font-weight: 600;
     }
     .actions {
       display: flex;
-      gap: 14px;
+      gap: 10px;
       flex-wrap: wrap;
     }
     .btn {
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
       padding: 10px 20px;
       font-weight: 600;
       font-size: 14px;
@@ -104,71 +92,64 @@
       background: var(--green);
       color: #fff;
     }
-    .btn-secondary {
+    .btn-outline {
       background: #fff;
-      border: 1px solid #c9d1d9;
-      color: #0f3c75;
+      border: 1px solid #b7c5d1;
+      color: var(--blue);
     }
     footer {
       text-align: center;
       font-size: 13px;
-      color: #6b7280;
-      margin-top: 32px;
+      color: #666;
+      margin-top: 40px;
     }
     @media (max-width: 700px) {
-      .data-grid {
+      .data {
         grid-template-columns: 1fr;
       }
       .card {
-        padding: 18px;
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
-  <header>Turvaline autentimine asutuste e-teenustes</header>
-
+  <header>Turvaline autentimine e-teenustes</header>
   <main>
-    <div class="crest-row">
-      <!-- lihtne sisseehitatud “vapp” SVG-na -->
-      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAiIGhlaWdodD0iNzAiIHZpZXdCb3g9IjAgMCA3MCA3MCIgeG1sbnpzcz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgcng9IjgiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2RkZCIvPjx0ZXh0IHg9IjM1IiB5PSI0MiIgZm9udC1zaXplPSIxMCIgZmlsbD0iIzMzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VkFQUDwvdGV4dD48L3N2Zz4=" alt="Vapp" />
+    <div class="crest">
+      <!-- Lihtne sisseehitatud SVG-vapp -->
+      <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAiIGhlaWdodD0iNzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjcwIiBoZWlnaHQ9IjcwIiByeD0iOCIgZmlsbD0iI2VmZWYiIHN0cm9rZT0iI2NjYyIvPjx0ZXh0IHg9IjM1IiB5PSI0MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMCIgZmlsbD0iIzMzMyI+VkFQUDwvdGV4dD48L3N2Zz4=" alt="Vapp" />
       <h2>Riigi autentimisteenus</h2>
     </div>
 
     <section class="card">
       <h1>Teenusesse Rahvastikuregistri e-teeninduskeskkond sisselogimine</h1>
-      <p class="lead">
-        Teenusesse Rahvastikuregistri e-teeninduskeskkond sisselogimiseks piisab seansi jätkamisest.
-        Teenusele edastatavad andmed:
-      </p>
-
-      <div class="data-grid">
+      <div class="data">
         <div>
-          <span class="field-label">Eesnimi</span>
-          <span class="field-value">Marten</span>
+          <span>Eesnimi</span>
+          <strong>Marten</strong>
         </div>
         <div>
-          <span class="field-label">Isikukood</span>
-          <!-- siin on 06, mitte 09 -->
-          <span class="field-value">EE50606307135</span>
+          <span>Isikukood</span>
+          <strong>EE50606307135</strong>
         </div>
         <div>
-          <span class="field-label">Perenimi</span>
-          <span class="field-value">Kaarna</span>
+          <span>Perenimi</span>
+          <strong>Kaarna</strong>
         </div>
         <div>
-          <span class="field-label">Sünniaeg</span>
-          <span class="field-value">30.06.2006</span>
+          <span>Sünniaeg</span>
+          <strong>30.06.2006</strong>
         </div>
       </div>
 
       <div class="actions">
         <button class="btn btn-primary">Jätka seanssi</button>
-        <button class="btn btn-secondary">Autendi uuesti</button>
+        <button class="btn btn-outline">Autendi uuesti</button>
       </div>
     </section>
 
-    <footer>© 2025 näidisleht</footer>
+    <footer>© 2025 Marten Kaarna</footer>
   </main>
 </body>
 </html>
